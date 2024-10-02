@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:submission_pemula/components/custom_navigation_bar.dart';
+import 'package:submission_pemula/screens/add_transaction_screen.dart';
 import 'package:submission_pemula/screens/profile_screen.dart';
 import 'package:submission_pemula/screens/summary_screen.dart';
 
@@ -28,7 +29,13 @@ class _HomeState extends State<Home> {
         ProfileScreen(),
       ][_currentPageIndex],
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return const AddTransactionScreen();
+            },
+          ));
+        },
         backgroundColor: Colors.black,
         child: const Icon(
           Icons.add,
