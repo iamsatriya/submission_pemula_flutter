@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:submission_pemula/components/custom_navigation_bar.dart';
+import 'package:submission_pemula/screens/profile_screen.dart';
 import 'package:submission_pemula/screens/summary_screen.dart';
 
 class Home extends StatefulWidget {
@@ -24,9 +25,7 @@ class _HomeState extends State<Home> {
       ),
       body: const [
         SummaryScreen(),
-        Center(
-          child: Text('Profile'),
-        )
+        ProfileScreen(),
       ][_currentPageIndex],
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
